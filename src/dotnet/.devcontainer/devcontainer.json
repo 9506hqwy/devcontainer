@@ -1,0 +1,22 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": "false",
+            "upgradePackages": "false",
+            "username": "vscode",
+            "userUid": "1000",
+            "userGid": "1000"
+        }
+    },
+    "capAdd": [
+        "SYS_PTRACE"
+    ],
+    "securityOpt": [
+        "seccomp=unconfined"
+    ],
+    "remoteUser": "vscode"
+}
